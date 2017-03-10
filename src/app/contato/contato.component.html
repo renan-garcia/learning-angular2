@@ -1,0 +1,24 @@
+<form #pessoa="ngForm" (ngSubmit)="enviarContato(pessoa)">
+  <label>
+    <span>Seu nome completo</span>
+    <input id="nome" type="text" name="nomeCompleto" placeholder="seu nome" #nomeCompleto="ngModel" ngModel minlength="2" required>
+  </label>
+  <div *ngIf="nomeCompleto.errors?.required && nomeCompleto.touched">
+    O nome é obrigatorio!
+  </div>
+  <label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
+    <span>E-mail</span>
+    <input type="email" name="email" placeholder="seu e-mail aqui..." ngModel required>
+    <span>E-mail Confirmação</span>
+    <input type="email" name="confirmação de email" placeholder="confirme seu e-mail aqui..." ngModel required>
+  </label>
+  <button type="submit" [disabled]="pessoa.invalid">Enviar</button>
+</form>
+
+<p>
+  {{nomeCompleto.errors | json}}
+</p>
+
+<p>
+  {{pessoa.controls.nomeCompleto?.errors | json}}
+</p>

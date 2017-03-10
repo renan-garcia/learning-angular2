@@ -9,7 +9,7 @@ import { Title } from "@angular/platform-browser";
 export class AppComponent implements OnInit {
     constructor(private title: Title){
     }
-    
+
     ngOnInit(): void {
       this.title.setTitle("GiphyApp");
     }

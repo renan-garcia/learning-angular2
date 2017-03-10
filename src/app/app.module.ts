@@ -6,6 +6,8 @@ import { SharedModule } from "app/shared/shared.module";
 import { AppRoutingModule } from "app/app-routing.module";
 import { GiphyModule } from "app/giphy/giphy.modules";
 import { GiphySearchModule } from "app/giphy/giphy-search/giphy-search.module";
+import { ContatoComponent } from './contato/contato.component';
+import { ContatoModule } from "app/contato/contato.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { GiphySearchModule } from "app/giphy/giphy-search/giphy-search.module";
     SharedModule,
     AppRoutingModule,
     GiphyModule,
-    GiphySearchModule
+    GiphySearchModule,
+    ContatoModule
   ],
   providers: [GiphyService],
   bootstrap: [AppComponent]
