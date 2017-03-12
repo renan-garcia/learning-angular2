@@ -9,8 +9,8 @@
   <label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
     <span>E-mail</span>
     <input type="email" name="email" placeholder="seu e-mail aqui..." ngModel required>
-    <span>E-mail Confirmação</span>
-    <input type="email" name="confirmação de email" placeholder="confirme seu e-mail aqui..." ngModel required>
+    <span>Mensagem</span>
+    <input type="text" name="mensagem" placeholder="escreva sua mensagem aqui..." ngModel required>
   </label>
   <button type="submit" [disabled]="pessoa.invalid">Enviar</button>
 </form>

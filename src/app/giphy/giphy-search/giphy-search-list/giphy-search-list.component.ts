@@ -7,7 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class GiphySearchListComponent implements OnInit {
 
   @Input()
-  gifs: any[] = [];
+  listaDeGifsInterna: any[] = [];
+
+  @Input()
+  palavra: string;
 
   constructor() {
   }

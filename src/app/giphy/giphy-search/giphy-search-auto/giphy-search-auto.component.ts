@@ -12,7 +12,7 @@ import { Response } from '@angular/http';
   templateUrl: './giphy-search-auto.component.html'
 })
 export class GiphySearchAutoComponent extends GiphySearchComponent implements OnInit {
-  limit: string = '3';
+  limit = '10';
 
   gifs: any[] = [];
 
